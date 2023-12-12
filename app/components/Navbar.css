@@ -1,0 +1,56 @@
+.menu:hover .blog-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(1deg 93% 47%) 0%,
+    hsl(20deg 100% 42%) 50%,
+    hsl(27deg 90% 41%) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu:hover .projects-gradient {
+  background: linear-gradient(
+    235deg,
+    hsl(242deg 93% 47%) 0%,
+    hsl(282deg 90% 39%) 50%,
+    hsl(320deg 89% 39%) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu:hover .about-gradient {
+  background: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu:hover .uses-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(1deg 93% 47%) 0%,
+    hsl(20deg 100% 42%) 50%,
+    hsl(27deg 90% 41%) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu:hover .blog-gradient {
+  background: linear-gradient(
+    180deg,
+    hsl(1deg 93% 47%) 0%,
+    hsl(20deg 100% 42%) 50%,
+    hsl(27deg 90% 41%) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
