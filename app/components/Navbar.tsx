@@ -35,7 +35,7 @@ const Navbar = () => {
   const [popup, setPopup] = useState(false);
 
   return (
-    <nav className="flex justify-between items-center rounded-full mdtext-lg">
+    <nav className="flex justify-between items-center rounded-full md:text-lg">
       <div>
         <Link href={"/"}>
           <h1 className="font-bold">&lt;/nabilfaturr&gt;</h1>

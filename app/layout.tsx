@@ -11,11 +11,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} bg-[#fafafa] max-w-6xl mx-auto p-4`}
-      >
-        <Navbar />
-        {children}
+      <body className={`${inter.className} bg-[#fafafa] max-w-5xl mx-auto p-4`}>
+        <main>
+          <Navbar />
+          {children}
+        </main>
       </body>
     </html>
   );
