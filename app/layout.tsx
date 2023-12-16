@@ -12,7 +12,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-[#fafafa] max-w-6xl mx-auto px-4 py-4`}
+        className={`${inter.className} bg-[#fafafa] max-w-6xl mx-auto p-4`}
       >
         <Navbar />
         {children}
