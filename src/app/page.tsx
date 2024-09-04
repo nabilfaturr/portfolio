@@ -37,7 +37,7 @@ const Hero = () => {
         <p
           className={`text-foreground/80 max-w-xl text-lg flex flex-col gap-2 ${inter.className}`}
         >
-          I'm a fullstack developer. love to build end-to-end web application
+          I&apos;m a fullstack developer. love to build end-to-end web application
           and design system. Whenever I feel like I should share my knowledge
           with others, I like to do it on my blog.
           <TimezoneBadge />
