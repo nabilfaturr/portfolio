@@ -87,4 +87,16 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  .mt-header {
+    @apply pt-[4rem];
+  }
+
+  .show {
+    @apply border border-red-500;
+  }
+
+  .show-green {
+    @apply border border-green-500;
+  }
 }

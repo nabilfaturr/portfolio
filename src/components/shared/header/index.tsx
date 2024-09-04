@@ -6,7 +6,7 @@ type HeaderProps = {};
 
 const Header: React.FC<HeaderProps> = () => {
   return (
-    <header className="container fixed top-0 left-0 right-0 z-50  my-2">
+    <header className="container fixed top-0 left-0 right-0 z-50 my-2">
       <Navbar />
     </header>
   );

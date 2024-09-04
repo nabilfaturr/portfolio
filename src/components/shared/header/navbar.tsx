@@ -9,10 +9,11 @@ type NavbarProps = {};
 
 const Navbar: React.FC<NavbarProps> = () => {
   return (
-    <nav className={`border backdrop-blur-lg flex items-center px-4 md:px-6 rounded-lg h-[3.5rem]`}>
+    <nav
+      className={`border backdrop-blur-lg flex items-center px-4 md:px-6 rounded-lg h-[3.5rem]`}
+    >
       <div className="flex items-center w-full justify-between gap-2">
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/favicon.ico" alt="logo" width={20} height={20} />
           <span className="text-lg font-medium text-[hsl(var(--brand-color))] ">
             nabilfaturr
           </span>
