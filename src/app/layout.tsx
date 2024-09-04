@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { GeistSans } from "geist/font/sans";
 import "./globals.css";
+import {
+  ThemeButton,
+  ThemeProvider,
+} from "@/components/shared/themes-provider";
+import Header from "@/components/shared/header";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +22,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${GeistSans.className}`}>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Header />
+          <main className="container mt-16 min-h-screen">{children}</main>
+        </ThemeProvider>
+      </body>
     </html>
   );
 }
