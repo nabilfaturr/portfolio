@@ -16,7 +16,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="pt-28 border-red-500 flex flex-col gap-8">
+    <div className="pt-12 border-red-500 flex flex-col gap-8">
       <div className="w-32 h-32 rounded-full overflow-hidden">
         <Image
           src={profPic}
