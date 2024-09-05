@@ -16,7 +16,7 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="pt-12 border-red-500 flex flex-col gap-8">
+    <div className="pt-24 flex flex-col gap-9">
       <div className="w-32 h-32 rounded-full overflow-hidden">
         <Image
           src={profPic}
@@ -25,12 +25,12 @@ const Hero = () => {
         />
       </div>
       <div className={`space-y-2`}>
-        <h2 className="text-2xl font-bold flex flex-col">
+        <h2 className="text-xl sm:text-2xl font-bold flex flex-col">
           <span className="flex items-center gap-2">
             <WavingHand />
             Hello World!
           </span>
-          <span className="text-4xl">
+          <span className="text-2xl xs:text-3xl sm:text-4xl">
             You can call me <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-400">Nabil</span>
           </span>
         </h2>
