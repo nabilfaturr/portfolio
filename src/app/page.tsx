@@ -8,8 +8,10 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <section className="w-full h-screen mt-16">
-      <Hero />
+    <section className="w-full h-screen absolute top-0 left-0 flex flex-col justify-center">
+      <div className="container pb-20">
+        <Hero />
+      </div>
     </section>
   );
 }
@@ -38,7 +40,9 @@ const Hero = () => {
               </span>
             </span>
           </h2>
-          <p className={`text-foreground/80 max-w-xl text-lg md:text-xl flex flex-col gap-2 ${inter.className}`}>
+          <p
+            className={`text-foreground/80 max-w-xl text-lg md:text-xl flex flex-col gap-2 ${inter.className}`}
+          >
             I&apos;m a fullstack developer. I love to build end-to-end web
             applications and design systems. Whenever I feel like I should share
             my knowledge with others, I like to do it on my blog.
