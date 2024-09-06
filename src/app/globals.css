@@ -89,7 +89,7 @@
   }
 
   .mt-header {
-    @apply pt-[4rem];
+    @apply pt-[4.5rem];
   }
 
   .show {
