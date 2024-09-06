@@ -32,7 +32,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ className }) => {
           </li>
         ))}
       </ul>
-      <Separator orientation="vertical" className="h-8"/>
+      {/* <Separator orientation="vertical" className="h-8"/> */}
       <ThemeButton />
     </div>
   );

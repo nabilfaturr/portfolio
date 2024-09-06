@@ -8,6 +8,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { navLinks } from "@/lib/constants";
 import { MenuIcon } from "lucide-react";
+import Link from "next/link";
 
 const MobileMenu = () => {
   return (
@@ -20,9 +21,14 @@ const MobileMenu = () => {
       <DropdownMenuContent align="end" className="w-40">
         <DropdownMenuGroup>
           {navLinks.map((link) => (
-            <DropdownMenuItem key={link.label} className="space-x-3 py-2 cursor-pointer">
-              <link.icon className="h-4 w-4" />
-              <span>{link.label}</span>
+            <DropdownMenuItem key={link.label} asChild>
+              <Link
+                href={link.href}
+                className="flex items-center py-2 gap-2 size-full"
+              >
+                <link.icon className="h-4 w-4" />
+                <span>{link.label}</span>
+              </Link>
             </DropdownMenuItem>
           ))}
         </DropdownMenuGroup>

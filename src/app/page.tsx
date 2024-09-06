@@ -16,33 +16,31 @@ export default function Home() {
 
 const Hero = () => {
   return (
-    <div className="pt-20 flex flex-col gap-5">
+    <div className="flex flex-col gap-5">
       <div className="w-32 h-32 rounded-full overflow-hidden">
         <Image
           src={profPic}
           alt="profile"
-          className="size-full object-cover object-top"
+          className="w-full h-full object-cover object-top"
         />
       </div>
       <div className="flex flex-col gap-5">
-        <div className={`space-y-2`}>
+        <div className="space-y-2">
           <h2 className="text-xl sm:text-2xl font-bold flex flex-col">
             <span className="flex items-center gap-2">
               <WavingHand />
               Hello World!
             </span>
-            <span className="text-2xl xs:text-3xl sm:text-4xl">
+            <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
               You can call me{" "}
               <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-400 dark:from-teal-600 dark:to-teal-400">
                 Nabil
               </span>
             </span>
           </h2>
-          <p
-            className={`text-foreground/80 max-w-xl text-lg flex flex-col gap-2 ${inter.className}`}
-          >
-            I&apos;m a fullstack developer. love to build end-to-end web
-            application and design system. Whenever I feel like I should share
+          <p className={`text-foreground/80 max-w-xl text-lg md:text-xl flex flex-col gap-2 ${inter.className}`}>
+            I&apos;m a fullstack developer. I love to build end-to-end web
+            applications and design systems. Whenever I feel like I should share
             my knowledge with others, I like to do it on my blog.
           </p>
         </div>
