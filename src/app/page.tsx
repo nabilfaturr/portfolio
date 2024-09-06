@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <section className="w-full h-screen relative mt-header">
+    <section className="w-full h-screen mt-16">
       <Hero />
     </section>
   );
