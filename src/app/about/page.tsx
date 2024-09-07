@@ -29,7 +29,7 @@ const BlogPage: React.FC<BlogPageProps> = () => {
             for competitive programming.
           </span>
           <span>
-            The journey ahead is long, and that’s the best part! There’s so much
+            I know the journey ahead is long, and that’s the best part! There’s so much
             to learn, and I’m motivated to explore as much as I can. I love
             learning, improving, and sharing my journey, so feel free to reach
             out—I’d be more than happy to connect.
