@@ -68,7 +68,7 @@ const CTA = () => {
   );
 };
 
-export const MyFace = () => {
+const MyFace = () => {
   return (
     <div className="w-32 h-32 rounded-full overflow-hidden">
       <Image
