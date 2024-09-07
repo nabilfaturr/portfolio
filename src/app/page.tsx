@@ -3,8 +3,14 @@ import Image from "next/image";
 import profPic from "@/../public/prof-pic.png";
 import WavingHand from "@/components/shared/icons/waving-hand";
 import { Inter } from "next/font/google";
+import { Metadata } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const metadata: Metadata = {
+  title: "Nabil | Home",
+  description: "Nabil's personal website",
+};
 
 export default function Home() {
   return (
