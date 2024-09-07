@@ -33,10 +33,7 @@ const Hero = () => {
               Hello World!
             </span>
             <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              You can call me{" "}
-              <span className="font-bold bg-gradient-to-r from-teal-200 to-teal-400 dark:from-teal-600 dark:to-teal-400">
-                Nabil
-              </span>
+              You can call me <span className="font-bold bg-brand-gradient">Nabil</span>
             </span>
           </h2>
           <p
