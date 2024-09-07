@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-import { ResolvableTo } from "tailwindcss/types/config";
 
 const config: Config = {
   darkMode: ["class"],
@@ -14,7 +13,7 @@ const config: Config = {
       container: {
         center: true,
         padding: {
-          DEFAULT: "0.5rem",
+          DEFAULT: "0.75rem",
         },
         screens: {
           xl: "1024px",

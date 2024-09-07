@@ -19,13 +19,6 @@ export default function Home() {
 const Hero = () => {
   return (
     <div className="flex flex-col gap-5">
-      <div className="w-32 h-32 rounded-full overflow-hidden">
-        <Image
-          src={profPic}
-          alt="profile"
-          className="w-full h-full object-cover object-top"
-        />
-      </div>
       <div className="flex flex-col gap-5">
         <div className="space-y-2">
           <h2 className="text-xl sm:text-2xl font-bold flex flex-col">
@@ -71,6 +64,18 @@ const CTA = () => {
       >
         Explore my work
       </Button>
+    </div>
+  );
+};
+
+export const MyFace = () => {
+  return (
+    <div className="w-32 h-32 rounded-full overflow-hidden">
+      <Image
+        src={profPic}
+        alt="profile"
+        className="w-full h-full object-cover object-top"
+      />
     </div>
   );
 };

@@ -10,7 +10,7 @@ type NavbarProps = {};
 const Navbar: React.FC<NavbarProps> = () => {
   return (
     <nav
-      className={`backdrop-blur-lg flex items-center px-4 md:px-6 rounded-lg h-[3.5rem]`}
+      className={`border backdrop-blur-lg flex items-center px-4 md:px-6 rounded-lg h-[3.5rem]`}
     >
       <div className="flex items-center w-full justify-between gap-2">
         <Link href="/" className="flex items-center gap-2">

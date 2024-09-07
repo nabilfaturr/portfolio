@@ -100,4 +100,9 @@
   .show-green {
     @apply border border-green-500;
   }
+
+  .text-color {
+    @apply text-slate-800 dark:text-slate-100
+  }
+
 }

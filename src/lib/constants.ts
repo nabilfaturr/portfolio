@@ -28,3 +28,13 @@ export type NavLink = {
   href: string;
   icon: LucideIcon;
 };
+
+export const webStacks = {
+  Framework: { name: "Next.js 14", url: "https://nextjs.org/" },
+  Language: { name: "TypeScript", url: "https://www.typescriptlang.org/" },
+  Styling: { name: "TailwindCSS", url: "https://tailwindcss.com/" },
+  UI: { name: "Shadcn/UI", url: "https://ui.shadcn.com/" },
+  Deployment: { name: "Vercel", url: "https://vercel.com/" },
+  Blog: { name: "MDX", url: "https://mdxjs.com/" },
+  Analytics: { name: "Coming Soon!", url: "" },
+};
