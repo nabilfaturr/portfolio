@@ -4,6 +4,7 @@ import profPic from "@/../public/prof-pic.png";
 import WavingHand from "@/components/shared/icons/waving-hand";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,7 +34,8 @@ const Hero = () => {
               Hello World!
             </span>
             <span className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-              You can call me <span className="font-bold bg-brand-gradient">Nabil</span>
+              You can call me{" "}
+              <span className="font-bold bg-brand-gradient">Nabil</span>
             </span>
           </h2>
           <p
@@ -58,14 +60,18 @@ const TimezoneBadge = () => {
 const CTA = () => {
   return (
     <div className="flex gap-4">
-      <Button className="bg-teal-600 text-white hover:bg-teal-600/80 transition-all duration-300">
-        Read my blog
+      <Button
+        className="bg-teal-600 text-white hover:bg-teal-600/80 transition-all duration-300"
+        asChild
+      >
+        <Link href="/blog">Read my blog</Link>
       </Button>
       <Button
         variant="outline"
         className="bg-teal-600/10 text-teal-600 border-0 hover:bg-teal-600/20 hover:text-teal-600/80 transition-all duration-300"
+        asChild
       >
-        Explore my work
+        <Link href="/projects">Explore my work</Link>
       </Button>
     </div>
   );
