@@ -22,6 +22,7 @@ const config: Config = {
       },
       screens: {
         xs: "360px",
+        "xsm": "440px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
