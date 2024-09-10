@@ -1,5 +1,12 @@
 import BlogList from "@/components/shared/blog-posts";
 import React from "react";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog | nabilfaturr",
+  description:
+    "This is a blog page. Here, I will be sharing my thoughts and experiences.",
+};
 
 const BlogPage = () => {
   return (
