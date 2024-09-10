@@ -3,7 +3,7 @@ import React from "react";
 
 type ProjectPageProps = {};
 
-const ProjectPage: React.FC<ProjectPageProps> = () => {
+const ProjectPage: React.FC<ProjectPageProps> = async () => {
   return <ComingSoon page="Projects" />;
 };
 

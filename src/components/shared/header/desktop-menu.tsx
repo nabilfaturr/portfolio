@@ -28,8 +28,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ className }) => {
               href={link.href}
               className={cn(
                 "text-sm font-medium transition-all duration-300 hover:text-teal-600",
-                isActive(link.href) ? "text-teal-600" : "text-slate-500",
-                isActive(link.href) && "underline"
+                isActive(link.href) ? "text-teal-600" : "text-slate-500"
               )}
             >
               {link.label}

@@ -1,4 +1,4 @@
-import { webStacks } from "@/lib/constants";
+import BlogList from "@/components/shared/blog-posts";
 import React from "react";
 
 const BlogPage = () => {
@@ -14,6 +14,8 @@ const BlogPage = () => {
           <span>This blog is created with Next.js and MDX</span>
         </p>
       </div>
+      <hr className="my-5" />
+      <BlogList />
     </div>
   );
 };
