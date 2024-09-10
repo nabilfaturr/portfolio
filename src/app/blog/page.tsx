@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen pb-10">
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold">Blog</h1>
         <p className="flex flex-col">

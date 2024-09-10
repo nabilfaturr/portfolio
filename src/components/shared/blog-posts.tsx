@@ -7,7 +7,7 @@ type BlogListProps = {};
 const BlogList: React.FC<BlogListProps> = () => {
   const blogPosts = getBlogPosts();
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
       {blogPosts.map((post) => (
         <BlogCard key={post.slug} {...post} />
       ))}
