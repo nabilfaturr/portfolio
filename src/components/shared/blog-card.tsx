@@ -35,10 +35,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
       </div>
       <article className="px-4 py-4 flex flex-col gap-2 h-48">
         <p className="text-muted-foreground flex justify-between text-[10px] xs:text-[12px] xsm:text-sm">
-          <span className="flex items-center gap-1">
-            <Calendar size={12} />
-            {formatDate(date)}
-          </span>
+          <span>{formatDate(date)}</span>
           <span className="flex items-center gap-2">
             <BlogTotalViews />
             <BlogReadTime />
