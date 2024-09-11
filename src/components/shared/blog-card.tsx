@@ -41,7 +41,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
             <BlogReadTime />
           </span>
         </p>
-        <h2 className="text-2xl font-bold">{title}</h2>
+        <h2 className="text-xl font-bold">{title}</h2>
         <p className="text-sm line-clamp-2 text-color">{description}</p>
         <p className="text-sm mt-auto text-muted-foreground flex items-center gap-1 group-hover:gap-2 transition-all duration-300 ease-in-out group-hover:text-teal-600">
           Read more <ArrowRight size={14} />

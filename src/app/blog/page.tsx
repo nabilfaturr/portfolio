@@ -21,7 +21,7 @@ const BlogPage = () => {
           </span>
           <span className="flex items-center gap-3 text-muted-foreground bg-yellow-100 text-yellow-700 border border-yellow-300 px-4 py-2 rounded-md w-fit text-sm">
             <CircleAlert className="w-6 h-6" /> Views and read time are
-            considered as a placeholder. I&apos;m working on it!
+            considered as a dummy placeholder. I&apos;m still working on it!
           </span>
         </p>
       </div>

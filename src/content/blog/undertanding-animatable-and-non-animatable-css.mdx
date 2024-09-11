@@ -1,0 +1,54 @@
+---
+title: "Understanding Animatable and Non-Animatable CSS Properties"
+description: "Deep dive into animatable and non-animatable CSS properties."
+date: "2024-02-01T00:00:00Z"
+thumbnail: "/blog/thumbnail/undertanding-animatable-and-non-animatable-css.webp"
+---
+
+# Understanding Animatable and Non-Animatable CSS Properties
+
+# TL;DR
+
+Never rely on `display`, `position`, `float`, `clear`, `overflow`, and `z-index` for creating animations.
+
+## Introduction
+
+Non-animatable properties are CSS properties that cannot be directly animated. When you try to apply a transition or animation to these properties, their values change instantly, without any transition or animation effect.
+
+## Why Can't Some Properties Be Animated?
+
+Some CSS properties can't be animated due to their discrete nature or because their functionality doesn't allow for interpolation (blending of values). For example, `display` is one of the most frequently mentioned properties because it has discrete values like `none`, `block`, `inline`, and others, which can't be smoothly interpolated (changed) from one to another.
+
+## Examples of Non-Animatable Properties
+
+1. **`display`**: Can't be animated because there's no way to interpolate between, for instance, `display: none` and `display: block`. Changes occur instantly.
+2. **`visibility`**: Similar to `display`, there's no interpolation between `visibility: hidden` and `visibility: visible`.
+3. **`position`**: Properties like `position: static`, `relative`, `absolute`, and `fixed` can't be animated because they're discrete values that change how elements are positioned.
+4. **`float`**: Values like `left`, `right`, and `none` also can't be animated.
+5. **`z-index`**: Controls the element's order in the stack (layer arrangement). Its numerical values can't be interpolated for animation.
+6. **`overflow`**: Determines how content exceeding the element's boundaries is processed (e.g., `visible`, `hidden`, `scroll`, `auto`). This can't be animated.
+7. **`clip`**: Although clip can be set to make parts of an element invisible, these values can't be interpolated and thus can't be animated.
+
+## In Contrast: Animatable Properties
+
+Unlike non-animatable properties, many CSS properties support animations and transitions, especially those with numerical values or values that can be interpolated. Some examples of animatable properties include:
+
+1. **`opacity`**: Controls element transparency.
+2. **`transform`**: Allows changes in scale, rotation, translation, and skew of elements.
+3. **`background-color`**: Allows transitions of background color.
+4. **`height`** and **`width`**: Allow transitions in element size.
+5. **`margin`**, **`padding`**, **`border-width`**: Allow transitions in dimensions of empty space and border width.
+6. **`color`**: Allows transitions of text color.
+
+## How to Know If a Property Can Be Animated?
+
+The official CSS documentation from the Mozilla Developer Network (MDN) is a good resource for checking if a property can be animated. Usually, the page for each CSS property will include an "animatable" section explaining whether the property can be animated, and if so, how it works.
+
+Examples on MDN:
+
+- For `display`: [https://developer.mozilla.org/en-US/docs/Web/CSS/display](https://developer.mozilla.org/en-US/docs/Web/CSS/display)
+- For `opacity`: [https://developer.mozilla.org/en-US/docs/Web/CSS/opacity](https://developer.mozilla.org/en-US/docs/Web/CSS/opacity)
+
+## Conclusion
+
+While many CSS properties support animations and transitions, some properties, like `display`, `visibility`, and `position`, can't be animated because they are discrete values or due to technical limitations in how these values are changed. Understanding which properties can and cannot be animated helps in designing effective and smooth animations on the web.
