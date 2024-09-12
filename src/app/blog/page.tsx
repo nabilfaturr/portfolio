@@ -1,7 +1,7 @@
-import BlogList from "@/components/shared/blog-posts";
 import React from "react";
 import { Metadata } from "next";
 import { CircleAlert } from "lucide-react";
+import BlogList from "@/components/shared/blog-list";
 
 export const metadata: Metadata = {
   title: "Blog | nabilfaturr",
