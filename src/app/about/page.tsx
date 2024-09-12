@@ -1,13 +1,14 @@
+import SectionProvider from "@/components/shared/provider/section-provider";
 import { webStacks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
 
-type BlogPageProps = {};
+type AboutPageProps = {};
 
-const BlogPage: React.FC<BlogPageProps> = () => {
+const AboutPage: React.FC<AboutPageProps> = () => {
   return (
-    <section className="space-y-8">
+    <SectionProvider>
       <div className="space-y-4">
         <h1 className="text-4xl font-bold">About Me</h1>
         <p className="flex flex-col gap-3 text-color">
@@ -37,7 +38,7 @@ const BlogPage: React.FC<BlogPageProps> = () => {
         </p>
       </div>
       <TechStack />
-    </section>
+    </SectionProvider>
   );
 };
 
@@ -71,4 +72,4 @@ const TechStack = () => {
   );
 };
 
-export default BlogPage;
+export default AboutPage;

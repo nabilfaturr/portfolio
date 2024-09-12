@@ -5,6 +5,7 @@ import WavingHand from "@/components/shared/icons/waving-hand";
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import Link from "next/link";
+import SectionProvider from "@/components/shared/provider/section-provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -15,11 +16,11 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <section className="w-full h-screen absolute top-0 left-0 flex flex-col justify-center">
-      <div className="container pb-20">
+    <SectionProvider className="flex flex-col justify-center pb-40">
+      <div className="absolute top-0 left-0 w-full h-full container flex flex-col justify-center">
         <Hero />
       </div>
-    </section>
+    </SectionProvider>
   );
 }
 

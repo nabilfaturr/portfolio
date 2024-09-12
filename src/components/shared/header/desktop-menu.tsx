@@ -4,7 +4,7 @@ import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import React from "react";
-import { ThemeButton } from "../themes-provider";
+import { ThemeButton } from "../provider/themes-provider";
 import { Separator } from "@/components/ui/separator";
 import { usePathname } from "next/navigation";
 

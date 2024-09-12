@@ -2,6 +2,7 @@ import React from "react";
 import { Metadata } from "next";
 import { CircleAlert } from "lucide-react";
 import BlogList from "@/components/shared/blog-list";
+import SectionProvider from "@/components/shared/provider/section-provider";
 
 export const metadata: Metadata = {
   title: "Blog | nabilfaturr",
@@ -11,7 +12,7 @@ export const metadata: Metadata = {
 
 const BlogPage = () => {
   return (
-    <div className="min-h-screen pb-10">
+    <SectionProvider className="min-h-screen">
       <div className="flex flex-col gap-2">
         <h1 className="text-4xl font-bold">Blog</h1>
         <p className="flex flex-col gap-2">
@@ -27,7 +28,7 @@ const BlogPage = () => {
       </div>
       <hr className="my-5" />
       <BlogList />
-    </div>
+    </SectionProvider>
   );
 };
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { ThemeButton } from "../themes-provider";
+import { ThemeButton } from "../provider/themes-provider";
 import MobileMenu from "@/components/shared/header/dropdown-menu";
 import DesktopMenu from "./desktop-menu";
 
