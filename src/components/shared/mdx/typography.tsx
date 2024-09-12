@@ -29,7 +29,7 @@ export const Heading = ({
 export const Code = ({ children }: { children: React.ReactNode }) => {
   return (
     <code
-      className={`${GeistMono.className} bg-teal-100 border border-teal-200 text-teal-700 px-1 py-0.5 rounded-md dark:bg-teal-900 dark:text-teal-300 dark:border-teal-800 leading-9 font-bold`}
+      className={`${GeistMono.className} bg-teal-100 border border-teal-200 text-teal-700 px-1 rounded-md dark:bg-teal-900 dark:text-teal-300 dark:border-teal-800 leading-7 font-bold`}
     >
       {children}
     </code>
