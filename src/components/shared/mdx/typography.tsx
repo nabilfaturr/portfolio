@@ -1,8 +1,20 @@
+import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
 
-export const Text = ({ children }: { children: React.ReactNode }) => {
+export const Text = ({
+  children,
+  className,
+}: {
+  children: React.ReactNode;
+  className?: string;
+}) => {
   return (
-    <p className="text-black/75 mb-4 dark:text-white/75 leading-9">
+    <p
+      className={cn(
+        "text-black/75 mb-4 dark:text-white/75 leading-9",
+        className
+      )}
+    >
       {children}
     </p>
   );
@@ -11,9 +23,11 @@ export const Text = ({ children }: { children: React.ReactNode }) => {
 export const Heading = ({
   children,
   level,
+  className,
 }: {
   children: React.ReactNode;
   level: 1 | 2 | 3;
+  className?: string;
 }) => {
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
 
@@ -23,7 +37,7 @@ export const Heading = ({
     3: "text-2xl font-bold mb-2 mt-12",
   };
 
-  return <Tag className={headingClasses[level]}>{children}</Tag>;
+  return <Tag className={cn(headingClasses[level], className)}>{children}</Tag>;
 };
 
 export const Code = ({ children }: { children: React.ReactNode }) => {
