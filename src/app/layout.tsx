@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
-import {
-  ThemeButton,
-  ThemeProvider,
-} from "@/components/shared/themes-provider";
+import { ThemeProvider } from "@/components/shared/provider/themes-provider";
 import Header from "@/components/shared/header";
-
-const inter = Inter({ subsets: ["latin"] });
+import Footer from "@/components/shared/footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${GeistSans.className}`}>
+      <body className={`${GeistSans.className} flex flex-col h-screen`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -30,7 +25,8 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <main className="container mt-header">{children}</main>
+          <main className="container">{children}</main>
+          <Footer />
         </ThemeProvider>
       </body>
     </html>
