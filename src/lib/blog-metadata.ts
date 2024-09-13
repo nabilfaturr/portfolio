@@ -1,4 +1,4 @@
-type BlogMetadata = {
+export type BlogMetadata = {
   title: string;
   description: string;
   date: string;

@@ -32,7 +32,7 @@ export const Heading = ({
   const Tag = `h${level}` as keyof JSX.IntrinsicElements;
 
   const headingClasses = {
-    1: "text-4xl font-bold mb-2 mt-7",
+    1: "text-4xl font-bold mb-2 py-10",
     2: "text-3xl font-bold mb-2 mt-12",
     3: "text-2xl font-bold mb-2 mt-12",
   };
