@@ -1,10 +1,12 @@
 import { blog_metadata_collection } from "@/lib/blog-metadata";
-import SectionProvider from "@/components/shared/provider/section-provider";
+import PostProvider from "@/components/shared/provider/post-provider";
 import TLDR from "./tldr";
 export const metadata =
   blog_metadata_collection["understanding-animatable-and-non-animatable-css"];
 
-<SectionProvider>
+  
+
+<PostProvider>
   # Understanding Animatable and Non-Animatable CSS Properties
 
 <TLDR />
@@ -51,4 +53,4 @@ Examples on MDN:
 
 While many CSS properties support animations and transitions, some properties, like `display`, `visibility`, and `position`, can't be animated because they are discrete values or due to technical limitations in how these values are changed. Understanding which properties can and cannot be animated helps in designing effective and smooth animations on the web.
 
-</SectionProvider>
+</PostProvider>
