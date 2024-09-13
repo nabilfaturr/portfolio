@@ -1,4 +1,5 @@
-import { LucideIcon, PenLine, User, BookOpen, Flame } from "lucide-react";
+import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
+import { LucideIcon, PenLine, User, BookOpen, Flame, LinkedinIcon } from "lucide-react";
 
 export const navLinks = [
   {
@@ -38,3 +39,9 @@ export const webStacks = {
   Blog: { name: "MDX", url: "https://mdxjs.com/" },
   Analytics: { name: "Coming Soon!", url: "" },
 };
+
+export const social_links = [
+  { label: "GitHub", href: "https://github.com/nabilfaturr", icon: GitHubLogoIcon},
+  { label: "Twitter", href: "https://x.com/_nabilfaturr", icon: TwitterLogoIcon },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/nabilfaturr/", icon: LinkedinIcon,  },
+];

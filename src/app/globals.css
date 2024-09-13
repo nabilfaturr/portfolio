@@ -112,4 +112,5 @@
   .bg-brand {
     @apply bg-[hsl(var(--brand-color))];
   }
+
 }
