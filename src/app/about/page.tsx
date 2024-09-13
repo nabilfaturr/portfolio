@@ -2,8 +2,15 @@ import FindMe from "@/components/shared/find-me";
 import SectionProvider from "@/components/shared/provider/section-provider";
 import { webStacks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import Link from "next/link";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "About | nabilfaturr",
+  description:
+    "Nabil Faturrahman's about page. talk about my journey and my tech stack.",
+};
 
 type AboutPageProps = {};
 
@@ -24,17 +31,18 @@ const AboutPage: React.FC<AboutPageProps> = () => {
             towards becoming a full-stack developer development and design.
           </span>
           <span>
-            My coding journey started back in 2020 during the COVID lockdown(shoutout to the K-drama Startup for inspiring me to dive in HAHAHA). I
-            started by diving deep into the internet and picked up Python as my
-            first programming language. Since then, college has introduced me to
-            React for web development, Flutter for mobile development, and C++
-            for competitive programming.
+            My coding journey started back in 2020 during the COVID
+            lockdown(shoutout to the K-drama Startup for inspiring me to dive in
+            HAHAHA). I started by diving deep into the internet and picked up
+            Python as my first programming language. Since then, college has
+            introduced me to React for web development, Flutter for mobile
+            development, and C++ for competitive programming.
           </span>
           <span>
-            I know the journey ahead is long, and that’s the best part! There’s so much
-            to learn, and I’m motivated to explore as much as I can. I love
-            learning, improving, and sharing my journey, so feel free to reach
-            out—I’d be more than happy to connect.
+            I know the journey ahead is long, and that’s the best part! There’s
+            so much to learn, and I’m motivated to explore as much as I can. I
+            love learning, improving, and sharing my journey, so feel free to
+            reach out—I’d be more than happy to connect.
           </span>
         </p>
       </div>

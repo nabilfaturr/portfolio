@@ -10,8 +10,9 @@ import SectionProvider from "@/components/shared/provider/section-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Nabil | Home",
-  description: "Nabil's personal website",
+  title: "Home | nabilfaturr",
+  description:
+    "Nabil Faturrahman's personal website. I'm a fullstack developer and a tech enthusiast.",
 };
 
 export default function Home() {

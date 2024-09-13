@@ -7,7 +7,7 @@ import SectionProvider from "@/components/shared/provider/section-provider";
 export const metadata: Metadata = {
   title: "Blog | nabilfaturr",
   description:
-    "This is a blog page. Here, I will be sharing my thoughts and experiences.",
+    "Nabil Faturrahman's blog page. here, I will be sharing my thoughts and experiences. hope you enjoy it!",
 };
 
 const BlogPage = () => {
