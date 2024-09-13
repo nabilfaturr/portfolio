@@ -38,7 +38,7 @@ export const SocialItem = ({
   icon: React.ElementType;
 }) => {
   const colorClasses = {
-    GitHub: "bg-black text-white ",
+    GitHub: "bg-black text-white border",
     Twitter: "bg-blue-500 text-white ",
     LinkedIn: "bg-blue-700 text-white ",
   };
