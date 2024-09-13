@@ -1,3 +1,4 @@
+import FindMe from "@/components/shared/find-me";
 import SectionProvider from "@/components/shared/provider/section-provider";
 import { webStacks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -37,6 +38,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
           </span>
         </p>
       </div>
+      <FindMe />
       <TechStack />
     </SectionProvider>
   );

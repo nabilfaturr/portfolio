@@ -41,7 +41,7 @@ export const webStacks = {
 };
 
 export const social_links = [
-  { label: "GitHub", href: "https://github.com/nabilfaturr", icon: GitHubLogoIcon},
   { label: "Twitter", href: "https://x.com/_nabilfaturr", icon: TwitterLogoIcon },
+  { label: "GitHub", href: "https://github.com/nabilfaturr", icon: GitHubLogoIcon},
   { label: "LinkedIn", href: "https://www.linkedin.com/in/nabilfaturr/", icon: LinkedinIcon,  },
 ];

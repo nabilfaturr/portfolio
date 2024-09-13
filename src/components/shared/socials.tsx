@@ -1,19 +1,14 @@
 import { social_links } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import clsx from "clsx";
 
-type SocialsVariant = "footer" | "about";
-
-const Socials = ({ variant = "footer" }: { variant?: SocialsVariant }) => {
+const Socials = () => {
   return (
-    <div className={cn("flex flex-col items-start", 
-      variant === "about" && "gap-6")}>
-      {variant === "footer" && <h2 className="text-lg font-medium mb-4">Socials</h2>}
-      <ul className={cn("flex gap-3",
-        variant === "footer" ? "flex-col items-start" : "flex-row items-center")}>
+    <div className="flex flex-col items-start gap-6">
+      <h2 className="text-lg font-medium">Socials</h2>
+      <ul className="flex flex-col gap-3 items-start">
         {social_links.map((link) => (
-          <SocialItem key={link.label} {...link} variant={variant} />
+          <SocialItem key={link.label} {...link} />
         ))}
       </ul>
     </div>
@@ -24,12 +19,10 @@ const SocialItem = ({
   label,
   href,
   icon: Icon,
-  variant,
 }: {
   label: string;
   href: string;
   icon: React.ElementType;
-  variant: SocialsVariant;
 }) => {
   const colorClasses = {
     GitHub: "bg-black text-white hover:bg-black/90",
@@ -40,27 +33,17 @@ const SocialItem = ({
   return (
     <li
       className={cn(
-        "rounded-lg hover:scale-105 transition-all duration-300",
-        variant === "footer" ? "w-32" : "w-10 h-10",
+        "rounded-lg hover:scale-105 transition-all duration-300 w-32",
         colorClasses[label as keyof typeof colorClasses]
       )}
     >
       <Link
         href={href}
-        className={clsx(
-          "flex items-center justify-center gap-2 font-medium",
-          variant === "footer" ? "px-4 py-4" : "w-full h-full"
-        )}
+        className="flex items-center justify-center gap-2 font-medium px-4 py-4"
         target="_blank"
         rel="noopener noreferrer"
       >
-        {variant === "footer" ? (
-          <>
-            {label} <Icon className="w-4 h-4" />
-          </>
-        ) : (
-          <Icon className="w-5 h-5" />
-        )}
+        {label} <Icon className="w-4 h-4" />
       </Link>
     </li>
   );
