@@ -5,7 +5,7 @@ import Socials from "../socials";
 
 const Footer = () => {
   return (
-    <footer>
+    <footer className="pt-20">
       <div className="max-w-screen-lg py-20 mx-auto border rounded-t-lg border-black/10 dark:border-white/10 backdrop-blur-sm flex flex-row justify-evenly">
         <Navigation />
         <Socials />

@@ -7,7 +7,7 @@ const FindMe = () => {
   return (
     <div className="flex flex-col gap-2">
       <h2 className="text-2xl font-bold">Find Me</h2>
-      <p>Here are some of the ways to find me:</p>
+      <p className="text-color">Here are some of the ways to find me:</p>
       <Socials />
     </div>
   );
