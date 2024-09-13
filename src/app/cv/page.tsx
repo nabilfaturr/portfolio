@@ -1,7 +1,6 @@
 import { redirect } from "next/navigation";
 
 export default function CVPage() {
-  redirect(
-    "https://docs.google.com/document/u/4/d/1P7eUnOlZZ0nYGklvbJXSCirf9JvTj9sAs--N5ym5M7k/pub"
-  );
+  const cv_url = `https://drive.google.com/file/d/1HDzPKPzvsA-DA1RH1EkvhAjjqlk8WD1E/view?usp=sharing`;
+  redirect(cv_url);
 }
