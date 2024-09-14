@@ -1,15 +1,18 @@
 import { project_metadata_collection } from "@/lib/project-metadata";
 import SectionProvider from "@/components/shared/provider/section-provider";
 import VideoDemo from "../../../components/shared/mdx/video-demo";
-export const metadata = project_metadata_collection["noteworthy"];
 import CodeBlock from "@/components/shared/mdx/code-block";
+import Live from "@/components/shared/live";
+
+export const metadata = project_metadata_collection["noteworthy"];
 
 <SectionProvider>
+<VideoDemo href={metadata.video_demo_url} />
   <h1 className="text-5xl font-bold">Noteworthy</h1>
 
 A Next.js note-taking platform with complete dashboard, robust folder organization, auto save functionality, and rich typography.
 
-<VideoDemo href={metadata.video_demo_url} />
+
 
 ## Description
 
@@ -31,16 +34,7 @@ Noteworthy is a powerful and intuitive note-taking application built with modern
 - Drizzle
 - Shadcn UI
 - Tailwind CSS
-
-## Live Demo
-
-Check out the live version of Noteworthy:
-[cutt.ly/noteworthy-live](https://cutt.ly/noteworthy-live)
-
-## GitHub Repository
-
-For more details and to contribute to the project, visit our GitHub repository:
-[cutt.ly/noteworthy-github](https://cutt.ly/noteworthy-github)
+<Live github_url={metadata.github_url} live_url={metadata.live_url} />
 
 ## Getting Started
 

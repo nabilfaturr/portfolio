@@ -75,7 +75,7 @@ export const MdxLink = ({
     <Link
       href={href}
       className={cn(
-        "text-teal-500 border-b border-dotted border-teal-500 hover:border-solid transition-all duration-300",
+        "text-teal-600 border-b border-dotted border-teal-600 hover:border-solid transition-all duration-300",
         className
       )}
     >
