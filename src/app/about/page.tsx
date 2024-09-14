@@ -16,7 +16,7 @@ type AboutPageProps = {};
 
 const AboutPage: React.FC<AboutPageProps> = () => {
   return (
-    <SectionProvider>
+    <SectionProvider className="flex flex-col gap-16">
       <div className="space-y-4">
         <h1 className="text-4xl font-bold">About Me</h1>
         <p className="flex flex-col gap-3 text-color">
