@@ -28,6 +28,7 @@ const SocialItem = ({
     GitHub: "bg-black text-white hover:bg-black/90 border",
     Twitter: "bg-blue-500 text-white hover:bg-blue-500/90",
     LinkedIn: "bg-blue-600 text-white hover:bg-blue-600/90",
+    Email: "bg-white text-black border",
   };
 
   return (
