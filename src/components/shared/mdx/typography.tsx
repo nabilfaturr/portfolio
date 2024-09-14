@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { GeistMono } from "geist/font/mono";
-
+import Link from "next/link";
 export const Text = ({
   children,
   className,
@@ -60,4 +60,34 @@ export const OrderedList = ({ children }: { children: React.ReactNode }) => {
 
 export const ListItem = ({ children }: { children: React.ReactNode }) => {
   return <li className="pl-2 pb-3 mb-3">{children}</li>;
+};
+
+export const CodeBlock = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <pre className="dark:bg-black/75 bg-black border text-white p-4 rounded-lg overflow-x-auto">
+      {children}
+    </pre>
+  );
+};
+
+export const MdxLink = ({
+  children,
+  href,
+  className,
+}: {
+  children: React.ReactNode;
+  href: string;
+  className?: string;
+}) => {
+  return (
+    <Link
+      href={href}
+      className={cn(
+        "text-teal-500 border-b border-dotted border-teal-500 hover:border-solid transition-all duration-300",
+        className
+      )}
+    >
+      {children}
+    </Link>
+  );
 };
