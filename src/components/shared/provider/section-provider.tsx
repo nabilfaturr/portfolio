@@ -11,7 +11,7 @@ const SectionProvider: React.FC<SectionProviderProps> = ({
   className,
 }) => {
   return (
-    <section className={cn(`min-h-screen space-y-6 mt-header`, className)}>
+    <section className={cn(`min-h-screen mt-header`, className)}>
       {children}
     </section>
   );

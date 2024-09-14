@@ -11,7 +11,7 @@ export const Text = ({
   return (
     <p
       className={cn(
-        "text-black/75 mb-4 dark:text-white/75 leading-9",
+        "text-black/75 mb-4 dark:text-white/75 mt-0 leading-8",
         className
       )}
     >
@@ -33,8 +33,8 @@ export const Heading = ({
 
   const headingClasses = {
     1: "text-4xl font-bold mb-2 py-10",
-    2: "text-3xl font-bold mb-2 mt-12",
-    3: "text-2xl font-bold mb-2 mt-12",
+    2: "text-3xl font-bold mb-2 mt-8",
+    3: "text-2xl font-bold mb-2 mt-8",
   };
 
   return <Tag className={cn(headingClasses[level], className)}>{children}</Tag>;
@@ -59,7 +59,7 @@ export const OrderedList = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const ListItem = ({ children }: { children: React.ReactNode }) => {
-  return <li className="pl-2 pb-3 mb-3">{children}</li>;
+  return <li className="pl-2 pb-3">{children}</li>;
 };
 
 export const MdxLink = ({
