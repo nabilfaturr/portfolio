@@ -20,7 +20,7 @@ export const project_metadata_collection: Record<Option, ProjectMetadata> = {
     thumbnail: "/projects/noteworthy/noteworthy-cover.webp",
     slug: "noteworthy",
     github_url: "https://github.com/nabilfaturr/noteworthy",
-    live_url: "https://noteworthy.nabilfaturr.site",
+    live_url: "https://cutt.ly/noteworthy-live",
     video_demo_url: "https://www.youtube.com/embed/CgF-ZkqhNr4",
   },
 };
