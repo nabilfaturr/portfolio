@@ -1,3 +1,5 @@
+"use client";
+
 import { social_links } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
@@ -15,7 +17,7 @@ const FindMe = () => {
 
 const Socials = () => {
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <ul className="grid grid-cols-1 md:grid-cols-4 gap-4">
       {social_links.map((social) => (
         <SocialItem
           key={social.href}
@@ -41,6 +43,7 @@ export const SocialItem = ({
     GitHub: "bg-black text-white border",
     Twitter: "bg-blue-500 text-white ",
     LinkedIn: "bg-blue-700 text-white ",
+    Email: "bg-white text-black border",
   };
 
   return (

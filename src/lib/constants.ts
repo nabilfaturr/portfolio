@@ -1,5 +1,13 @@
 import { GitHubLogoIcon, TwitterLogoIcon } from "@radix-ui/react-icons";
-import { LucideIcon, PenLine, User, BookOpen, Flame, LinkedinIcon } from "lucide-react";
+import {
+  LucideIcon,
+  PenLine,
+  User,
+  BookOpen,
+  Flame,
+  LinkedinIcon,
+  Mail,
+} from "lucide-react";
 
 export const navLinks = [
   {
@@ -41,7 +49,20 @@ export const webStacks = {
 };
 
 export const social_links = [
-  { label: "Twitter", href: "https://x.com/_nabilfaturr", icon: TwitterLogoIcon },
-  { label: "GitHub", href: "https://github.com/nabilfaturr", icon: GitHubLogoIcon},
-  { label: "LinkedIn", href: "https://www.linkedin.com/in/nabilfaturr/", icon: LinkedinIcon,  },
+  {
+    label: "Twitter",
+    href: "https://x.com/_nabilfaturr",
+    icon: TwitterLogoIcon,
+  },
+  {
+    label: "GitHub",
+    href: "https://github.com/nabilfaturr",
+    icon: GitHubLogoIcon,
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/nabilfaturr/",
+    icon: LinkedinIcon,
+  },
+  { label: "Email", href: "mailto:devnabilfaturr@gmail.com?subject=Hello", icon: Mail },
 ];
