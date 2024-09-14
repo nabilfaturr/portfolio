@@ -1,10 +1,85 @@
 import { project_metadata_collection } from "@/lib/project-metadata";
 import SectionProvider from "@/components/shared/provider/section-provider";
 import VideoDemo from "../../../components/shared/mdx/video-demo";
-
 export const metadata = project_metadata_collection["noteworthy"];
+import CodeBlock from "@/components/shared/mdx/code-block";
 
 <SectionProvider>
-  # Noteworthy
-  <VideoDemo href={metadata.video_demo_url} />
+  <h1 className="text-5xl font-bold">Noteworthy</h1>
+
+A Next.js note-taking platform with complete dashboard, robust folder organization, auto save functionality, and rich typography.
+
+<VideoDemo href={metadata.video_demo_url} />
+
+## Description
+
+Noteworthy is a powerful and intuitive note-taking application built with modern web technologies. It offers a seamless user experience with features like:
+
+- Complete dashboard for easy note management
+- Robust folder organization to keep your notes structured
+- Auto-save functionality to ensure you never lose your work
+- Rich typography options for expressive note-taking
+
+## Tech Stack
+
+- Next.js 14
+- Tiptap
+- Zustand
+- Auth.js
+- Turso
+- SQLite
+- Drizzle
+- Shadcn UI
+- Tailwind CSS
+
+## Live Demo
+
+Check out the live version of Noteworthy:
+[cutt.ly/noteworthy-live](https://cutt.ly/noteworthy-live)
+
+## GitHub Repository
+
+For more details and to contribute to the project, visit our GitHub repository:
+[cutt.ly/noteworthy-github](https://cutt.ly/noteworthy-github)
+
+## Getting Started
+
+To set up the Noteworthy project locally, follow these steps:
+
+1. Clone the repository:
+
+   <CodeBlock>
+     <span>git clone https://github.com/your-username/noteworthy.git</span>
+     <span>cd noteworthy</span>
+   </CodeBlock>
+
+2. Install dependencies:
+
+   <CodeBlock>
+     <span>npm install</span>
+   </CodeBlock>
+
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the necessary environment variables. (You may need to specify which variables are required)
+
+4. Run the development server:
+
+   <CodeBlock>
+     <span>npm run dev</span>
+   </CodeBlock>
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the application.
+
+## Contributing
+
+We welcome contributions to Noteworthy! Please read our contributing guidelines before submitting pull requests.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Acknowledgements
+
+Thanks to all the open-source projects that made Noteworthy possible.
+
 </SectionProvider>

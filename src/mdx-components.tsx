@@ -6,7 +6,6 @@ import {
   Text,
   UnorderedList,
   ListItem,
-  CodeBlock,
   MdxLink,
 } from "./components/shared/mdx/typography";
 
@@ -20,7 +19,6 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
     ul: ({ children }) => <UnorderedList>{children}</UnorderedList>,
     ol: ({ children }) => <OrderedList>{children}</OrderedList>,
     li: ({ children }) => <ListItem>{children}</ListItem>,
-    pre: ({ children }) => <CodeBlock>{children}</CodeBlock>,
     a: ({ children, href, className }) => (
       <MdxLink href={href || ""} className={className}>
         {children}

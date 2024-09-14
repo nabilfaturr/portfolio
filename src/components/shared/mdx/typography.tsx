@@ -62,14 +62,6 @@ export const ListItem = ({ children }: { children: React.ReactNode }) => {
   return <li className="pl-2 pb-3 mb-3">{children}</li>;
 };
 
-export const CodeBlock = ({ children }: { children: React.ReactNode }) => {
-  return (
-    <pre className="dark:bg-black/75 bg-black border text-white p-4 rounded-lg overflow-x-auto">
-      {children}
-    </pre>
-  );
-};
-
 export const MdxLink = ({
   children,
   href,
