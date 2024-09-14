@@ -2,6 +2,7 @@ import ComingSoon from "@/components/shared/page/coming-soon";
 import SectionProvider from "@/components/shared/provider/section-provider";
 import React from "react";
 import { Metadata } from "next";
+import ProjectList from "@/components/shared/project-list";
 
 export const metadata: Metadata = {
   title: "Projects | nabilfaturr",
@@ -14,7 +15,12 @@ type ProjectPageProps = {};
 const ProjectPage: React.FC<ProjectPageProps> = async () => {
   return (
     <SectionProvider>
-      <ComingSoon page="Projects" />
+      <h1 className="text-4xl font-bold">Projects</h1>
+      <p className="text-color">
+        The list of my projects. Everything was made with ❤️.
+      </p>
+      <hr className="my-5" />
+      <ProjectList />
     </SectionProvider>
   );
 };
