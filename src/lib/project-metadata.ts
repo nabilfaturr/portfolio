@@ -6,7 +6,7 @@ export type ProjectMetadata = {
   slug: Option;
   github_url: string;
   live_url: string;
-  video_demo?: string;
+  video_demo_url?: string;
 };
 
 type Option = "noteworthy";
@@ -21,6 +21,6 @@ export const project_metadata_collection: Record<Option, ProjectMetadata> = {
     slug: "noteworthy",
     github_url: "https://github.com/nabilfaturr/noteworthy",
     live_url: "https://noteworthy.nabilfaturr.site",
-    video_demo: "/projects/noteworthy/noteworthy-demo.mp4",
+    video_demo_url: "https://www.youtube.com/embed/CgF-ZkqhNr4",
   },
 };

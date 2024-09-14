@@ -1,0 +1,10 @@
+import { project_metadata_collection } from "@/lib/project-metadata";
+import SectionProvider from "@/components/shared/provider/section-provider";
+import VideoDemo from "./video-demo";
+
+export const metadata = project_metadata_collection["noteworthy"];
+
+<SectionProvider>
+  # Noteworthy
+  <VideoDemo href={metadata.video_demo_url} />
+</SectionProvider>
