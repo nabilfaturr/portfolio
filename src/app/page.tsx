@@ -2,12 +2,9 @@ import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import profPic from "@/../public/prof-pic.png";
 import WavingHand from "@/components/shared/icons/waving-hand";
-import { Inter } from "next/font/google";
 import { Metadata } from "next";
 import Link from "next/link";
 import SectionProvider from "@/components/shared/provider/section-provider";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Home | nabilfaturr",
@@ -39,7 +36,7 @@ const Hero = () => {
             </span>
           </h2>
           <p
-            className={`text-foreground/80 max-w-xl text-lg md:text-xl flex flex-col gap-2 ${inter.className}`}
+            className={`text-foreground/80 max-w-xl text-md sm:text-lg md:text-xl flex flex-col gap-2`}
           >
             I&apos;m a fullstack developer. I love to build end-to-end web
             applications and design systems. Whenever I feel like I should share
