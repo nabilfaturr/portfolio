@@ -3,6 +3,7 @@ import { ArrowRight, Calendar, Clock, Eye } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { StaticImage } from "./static-image";
 
 type BlogCardProps = {
   title: string;
@@ -25,14 +26,11 @@ const BlogCard: React.FC<BlogCardProps> = ({
       href={`/blog/${slug}`}
       className="flex flex-col border rounded-md overflow-hidden group shadow-sm"
     >
-      <div className="relative aspect-video overflow-hidden">
-        <Image
-          src={thumbnail}
-          alt={title}
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-110 transform-gpu"
-        />
-      </div>
+      <StaticImage
+        src={thumbnail}
+        containerClass="aspect-video overflow-hidden"
+        alt={title}
+      />
       <article className="px-4 py-4 flex flex-col gap-2 h-48">
         <p className="text-muted-foreground flex justify-between text-[10px] xs:text-[12px] xsm:text-sm">
           <span>{formatDate(date)}</span>
