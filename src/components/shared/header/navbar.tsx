@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import React from "react";
 import { ThemeButton } from "../provider/themes-provider";
@@ -7,9 +9,22 @@ import DesktopMenu from "./desktop-menu";
 type NavbarProps = {};
 
 const Navbar: React.FC<NavbarProps> = () => {
+  const [isScrolled, setIsScrolled] = React.useState(false);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 100);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+  }, []);
   return (
     <nav
-      className={`border border-black/10  dark:border-white/10 backdrop-blur-3xl flex items-center px-4 md:px-6 rounded-lg h-[3.5rem]`}
+      className={`border backdrop-blur-3xl flex items-center px-4 md:px-6 rounded-lg h-[3.5rem] transition-colors duration-200 ${
+        isScrolled
+          ? "border-black/10 dark:border-white/10"
+          : "border-transparent"
+      }`}
     >
       <div className="flex items-center w-full justify-between gap-2">
         <Link href="/" className="flex items-center gap-2">
@@ -18,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           </span>
         </Link>
 
-        <DesktopMenu />
+        <DesktopMenu isScrolled={isScrolled} />
 
         <div className="md:hidden flex items-center gap-2">
           <ThemeButton />

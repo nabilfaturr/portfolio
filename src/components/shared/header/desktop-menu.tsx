@@ -10,9 +10,10 @@ import { usePathname } from "next/navigation";
 
 type DesktopMenuProps = {
   className?: string;
+  isScrolled: boolean;
 };
 
-const DesktopMenu: React.FC<DesktopMenuProps> = ({ className }) => {
+const DesktopMenu: React.FC<DesktopMenuProps> = ({ className, isScrolled }) => {
   const currentPath = usePathname();
 
   const isActive = (path: string) => {
@@ -36,7 +37,7 @@ const DesktopMenu: React.FC<DesktopMenuProps> = ({ className }) => {
           </li>
         ))}
       </ul>
-      <Separator orientation="vertical" className="h-8" />
+      <Separator orientation="vertical" className={cn("h-8", isScrolled ? "visible" : "invisible")} />
       <ThemeButton />
     </div>
   );
