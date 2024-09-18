@@ -4,6 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/shared/provider/themes-provider";
 import Header from "@/components/shared/header";
 import Footer from "@/components/shared/footer";
+import BgGradient from "@/components/ui/bg-gradient";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,6 +19,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${GeistSans.className} flex flex-col h-screen`}>
+        <BgGradient />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
