@@ -8,6 +8,7 @@ type StaticImageProps = {
   alt: string;
   containerClass?: string;
   className?: string;
+  sizes?: string;
 };
 
 export const StaticImage = async ({
@@ -15,6 +16,7 @@ export const StaticImage = async ({
   alt,
   containerClass,
   className,
+  sizes = "(max-width: 480px) 100vw, (max-width: 768px) 80vw, 50vw",
   ...props
 }: StaticImageProps) => {
   const { img, base64 } = await getLocalImage(src);
@@ -26,7 +28,7 @@ export const StaticImage = async ({
         blurDataURL={base64}
         className={cn("object-cover", className)}
         fill
-        sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 50vw"
+        sizes={sizes}
         placeholder="blur"
         {...props}
       />

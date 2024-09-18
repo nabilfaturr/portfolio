@@ -3,6 +3,7 @@ import { cn } from "@/lib/utils";
 import { BlogMetadata } from "@/lib/blog-metadata";
 import Image from "next/image";
 import Share from "./share";
+import StaticImage from "../static-image";
 
 type CoverProps = PropsWithChildren &
   BlogMetadata & {
@@ -28,12 +29,11 @@ const Cover: React.FC<CoverProps> = ({
       )}
     >
       <div className="relative size-full">
-        <Image
+        <StaticImage
+          containerClass="relative size-full"
           src={thumbnail}
           alt={title}
-          style={{ objectPosition: "top" }}
-          fill
-          className="w-full h-full object-cover"
+          sizes="(max-width: 480px) 100vw, (max-width: 768px) 80vw, 50vw"
         />
         <div className="absolute bottom-0 left-0 w-full h-full bg-gradient-to-t from-black to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute bottom-0 left-0 w-full h-full flex flex-col justify-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
