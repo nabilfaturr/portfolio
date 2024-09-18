@@ -11,7 +11,7 @@ const light_gradient =
 
 const BgGradient = () => {
   return (
-    <div className="absolute z-[-1] w-[calc(100vw-20px)] top-[-120px] dark:top-[-240px] h-[180px] mx-auto">
+    <div className="absolute z-[-1] w-[calc(100vw-20px)] top-[-180px] dark:top-[-240px] h-[180px] mx-auto">
       <div
         className={cn(
           "max-w-6xl dark:max-w-3xl mx-auto w-full h-full blur-[140px] dark:blur-[160px]",
