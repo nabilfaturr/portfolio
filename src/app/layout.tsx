@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { GeistSans } from "geist/font/sans";
 import "./globals.css";
 import { ThemeProvider } from "@/components/shared/provider/themes-provider";
@@ -26,6 +27,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <SpeedInsights />
           <Header />
           <main className="container">{children}</main>
           <Footer />
