@@ -14,7 +14,7 @@ const LatestProjectSection = () => {
     <SectionProvider id="latest-project">
       <div>
         <LatestProjectHeader />
-        <GridProvider className="p-8 border rounded-b-md">
+        <GridProvider className="p-5 border rounded-b-md">
           <ProjectInformation
             title={title}
             description={long_description}

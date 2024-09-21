@@ -16,14 +16,14 @@ const ProjectInformation = ({
   return (
     <div className="flex flex-col items-start justify-between gap-5">
       <h3 className="text-2xl font-semibold">{title}</h3>
-      <p className="text-color">{description}</p>
-      <div className="flex items-center gap-3">
+      <p className=" text-muted-foreground">{description}</p>
+      <div className="flex items-center gap-4">
         {latest_project_tech_stack.map((tech) => {
           const Icon = tech.icon;
           return (
             <TooltipIcon
               key={tech.name}
-              icon={<Icon size={28} />}
+              icon={<Icon size={24} className="dark:text-white/90 text-black/90"/>}
               name={tech.name}
               size={20}
               link={tech.link}
