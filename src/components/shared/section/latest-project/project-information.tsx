@@ -23,7 +23,9 @@ const ProjectInformation = ({
           return (
             <TooltipIcon
               key={tech.name}
-              icon={<Icon size={24} className="dark:text-white/90 text-black/90"/>}
+              icon={
+                <Icon size={24} className="dark:text-white/90 text-black/90" />
+              }
               name={tech.name}
               size={20}
               link={tech.link}

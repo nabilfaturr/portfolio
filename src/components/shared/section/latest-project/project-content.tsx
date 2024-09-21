@@ -8,7 +8,9 @@ const LatestProjectContent = ({
   children: React.ReactNode;
   className?: string;
 }) => {
-  return <div className={cn("flex flex-col gap-2", className)}>{children}</div>;
+  return (
+    <div className={cn("grid md:grid-cols-2 gap-6", className)}>{children}</div>
+  );
 };
 
 export default LatestProjectContent;
