@@ -1,8 +1,8 @@
 import React from "react";
-import SectionProvider from "../provider/section-provider";
+import SectionProvider from "../../provider/section-provider";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import WavingHand from "../icons/waving-hand";
+import WavingHand from "../../icons/waving-hand";
 
 const HeroSection = () => {
   return (

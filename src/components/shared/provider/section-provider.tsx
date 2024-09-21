@@ -4,14 +4,16 @@ import React from "react";
 type SectionProviderProps = {
   className?: string;
   children: React.ReactNode;
+  id?: string;
 };
 
 const SectionProvider: React.FC<SectionProviderProps> = ({
   children,
   className,
+  id,
 }) => {
   return (
-    <section className={cn(`min-h-screen mt-header`, className)}>
+    <section id={id} className={cn(`min-h-screen mt-header`, className)}>
       {children}
     </section>
   );
