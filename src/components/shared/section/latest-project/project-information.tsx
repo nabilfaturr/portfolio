@@ -1,17 +1,13 @@
-import Link from "next/link";
 import React from "react";
 import { latest_project_tech_stack } from "./constant";
 import { TooltipIcon } from "../../tooltip";
-import SeeMore from "./see-more";
 
 const ProjectInformation = ({
   title,
   description,
-  slug,
 }: {
   title: string;
   description: string;
-  slug: string;
 }) => {
   return (
     <div className="flex flex-col items-start justify-between gap-5">
@@ -33,7 +29,6 @@ const ProjectInformation = ({
           );
         })}
       </div>
-      <SeeMore variant="desktop" slug={slug} />
     </div>
   );
 };
