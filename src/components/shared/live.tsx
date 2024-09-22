@@ -1,8 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { Github, Play } from "lucide-react";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import { Heading } from "./mdx/typography";
 const Live = ({
   github_url,
   live_url,

@@ -8,7 +8,8 @@ import LatestProjectContent from "./project-content";
 import LatestProjectFooter from "./latest-project-footer";
 
 const LatestProjectSection = () => {
-  const { title, long_description, thumbnail, slug } = latest_project_metadata;
+  const { title, long_description, thumbnail, slug, github_url, live_url } =
+    latest_project_metadata;
   return (
     <SectionProvider id="latest-project">
       <div>
@@ -17,7 +18,11 @@ const LatestProjectSection = () => {
           <ProjectInformation title={title} description={long_description} />
           <ProjectImage title={title} thumbnail={thumbnail} />
         </LatestProjectContent>
-        <LatestProjectFooter slug={slug} />
+        <LatestProjectFooter
+          slug={slug}
+          github_url={github_url}
+          live_url={live_url}
+        />
       </div>
     </SectionProvider>
   );
