@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import HeroSection from "@/components/shared/section/hero";
 import LatestProjectSection from "@/components/shared/section/latest-project";
+import LatestWrite from "@/components/shared/section/selected-write";
 
 export const metadata: Metadata = {
   title: "Home | nabilfaturr",
@@ -13,6 +14,7 @@ export default function Home() {
     <>
       <HeroSection />
       <LatestProjectSection />
+      <LatestWrite />
     </>
   );
 }

@@ -11,7 +11,7 @@ const LatestProjectSection = () => {
   const { title, long_description, thumbnail, slug, github_url, live_url } =
     latest_project_metadata;
   return (
-    <SectionProvider id="latest-project">
+    <SectionProvider id="latest-project" className="min-h-fit">
       <div>
         <LatestProjectHeader />
         <LatestProjectContent className="p-5 border">
