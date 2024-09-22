@@ -14,7 +14,7 @@ const LatestProjectSection = () => {
     <SectionProvider id="latest-project" className="min-h-fit">
       <div>
         <LatestProjectHeader />
-        <LatestProjectContent className="p-5 border">
+        <LatestProjectContent className="p-5 border bg-black/5 dark:bg-white/5">
           <ProjectInformation title={title} description={long_description} />
           <ProjectImage title={title} thumbnail={thumbnail} />
         </LatestProjectContent>
