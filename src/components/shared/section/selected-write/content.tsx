@@ -9,7 +9,7 @@ const SelectedWriteContent = ({
   className?: string;
 }) => {
   return (
-    <div className={cn("grid md:grid-cols-2 gap-6", className)}>
+    <div className={cn("grid grid-cols-1 md:grid-cols-2 gap-6", className)}>
       {children}
     </div>
   );

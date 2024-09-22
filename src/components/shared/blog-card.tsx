@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { StaticImage } from "./static-image";
+import { cn } from "@/lib/utils";
 
 type BlogCardProps = {
   title: string;
@@ -11,6 +12,7 @@ type BlogCardProps = {
   date: string;
   thumbnail: string;
   slug: string;
+  contentClassName?: string;
 };
 
 const BlogCard: React.FC<BlogCardProps> = ({
@@ -19,6 +21,7 @@ const BlogCard: React.FC<BlogCardProps> = ({
   date,
   thumbnail,
   slug,
+  contentClassName,
 }) => {
   return (
     <Link
@@ -31,7 +34,9 @@ const BlogCard: React.FC<BlogCardProps> = ({
         containerClass="aspect-video overflow-hidden"
         alt={title}
       />
-      <article className="px-4 py-4 flex flex-col gap-2 h-48">
+      <article
+        className={cn(`px-4 py-4 flex flex-col gap-2 h-48`, contentClassName)}
+      >
         <p className="text-muted-foreground flex justify-between text-[10px] xs:text-[12px] xsm:text-sm">
           <span>{formatDate(date)}</span>
           <span className="flex items-center gap-2">
