@@ -3,11 +3,13 @@ import SectionProvider from "../../provider/section-provider";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import WavingHand from "../../icons/waving-hand";
+import ArrowDown from "./arrow-down";
 
 const HeroSection = () => {
   return (
     <SectionProvider className="flex flex-col justify-center pb-40">
       <Hero />
+      <ArrowDown />
     </SectionProvider>
   );
 };
