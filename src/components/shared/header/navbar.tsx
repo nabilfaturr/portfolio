@@ -33,7 +33,7 @@ const Navbar: React.FC<NavbarProps> = () => {
           </span>
         </Link>
 
-        <DesktopMenu isScrolled={isScrolled} />
+        <DesktopMenu />
 
         <div className="md:hidden flex items-center gap-2">
           <ThemeButton />
