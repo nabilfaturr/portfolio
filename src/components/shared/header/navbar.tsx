@@ -20,7 +20,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   }, []);
   return (
     <nav
-      className={`border backdrop-blur-3xl flex items-center px-4 md:px-6 rounded-lg h-[3.5rem] transition-colors duration-200 ${
+      className={`backdrop-blur-3xl bg-black/5 dark:bg-black/30 flex items-center px-4 md:px-6 rounded-lg h-[3.5rem] transition-colors duration-200 ${
         isScrolled
           ? "border-black/10 dark:border-white/10"
           : "border-transparent"
