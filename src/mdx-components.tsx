@@ -7,6 +7,12 @@ import {
   UnorderedList,
   ListItem,
   MdxLink,
+  Table,
+  TableHead,
+  TableBody,
+  TableRow,
+  TableHeader,
+  TableCell,
 } from "./components/shared/mdx/typography";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
@@ -24,6 +30,12 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </MdxLink>
     ),
+    table: ({ children }) => <Table>{children}</Table>,
+    thead: ({ children }) => <TableHead>{children}</TableHead>,
+    tbody: ({ children }) => <TableBody>{children}</TableBody>,
+    tr: ({ children }) => <TableRow>{children}</TableRow>,
+    th: ({ children }) => <TableHeader>{children}</TableHeader>,
+    td: ({ children }) => <TableCell>{children}</TableCell>,
     ...components,
   };
 }

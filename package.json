@@ -28,6 +28,7 @@
     "plaiceholder": "^3.0.0",
     "react": "^18",
     "react-dom": "^18",
+    "remark-gfm": "^4.0.1",
     "sharp": "^0.32.6",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7"

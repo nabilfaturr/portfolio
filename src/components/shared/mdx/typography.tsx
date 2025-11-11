@@ -83,3 +83,45 @@ export const MdxLink = ({
     </Link>
   );
 };
+
+export const Table = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <div className="overflow-x-auto mb-4">
+      <table className="w-full border-collapse border border-black/20 dark:border-white/20">
+        {children}
+      </table>
+    </div>
+  );
+};
+
+export const TableHead = ({ children }: { children: React.ReactNode }) => {
+  return <thead className="bg-black/5 dark:bg-white/5">{children}</thead>;
+};
+
+export const TableBody = ({ children }: { children: React.ReactNode }) => {
+  return <tbody>{children}</tbody>;
+};
+
+export const TableRow = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <tr className="border-b border-black/10 dark:border-white/10">
+      {children}
+    </tr>
+  );
+};
+
+export const TableHeader = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <th className="border border-black/20 dark:border-white/20 px-4 py-2 text-left font-semibold">
+      {children}
+    </th>
+  );
+};
+
+export const TableCell = ({ children }: { children: React.ReactNode }) => {
+  return (
+    <td className="border border-black/20 dark:border-white/20 px-4 py-2">
+      {children}
+    </td>
+  );
+};

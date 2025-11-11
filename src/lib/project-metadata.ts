@@ -9,7 +9,7 @@ export type ProjectMetadata = {
   video_demo_url?: string;
 };
 
-type Option = "noteworthy";
+type Option = "noteworthy" | "reclara";
 
 export const project_metadata_collection: Record<Option, ProjectMetadata> = {
   noteworthy: {
@@ -22,5 +22,16 @@ export const project_metadata_collection: Record<Option, ProjectMetadata> = {
     github_url: "https://github.com/nabilfaturr/noteworthy",
     live_url: "https://cutt.ly/noteworthy-live",
     video_demo_url: "https://www.youtube.com/embed/CgF-ZkqhNr4",
+  },
+  reclara: {
+    title: "Reclara",
+    description:
+      "YouTube video summarization system with automatic transcription and AI-powered summaries.",
+    date: "2024-11-11T00:00:00Z",
+    thumbnail: "/projects/reclara/reclara-cover.webp",
+    slug: "reclara",
+    github_url: "https://github.com/nabilfaturr/reclara",
+    live_url: "https://cutt.ly/reclara-live",
+    video_demo_url: "https://www.youtube.com/embed/K1iApz-vKyU",
   },
 };
