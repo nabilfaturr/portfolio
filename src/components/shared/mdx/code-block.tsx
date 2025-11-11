@@ -6,7 +6,7 @@ import React from "react";
 
 const CodeBlock = ({ children }: { children: React.ReactNode }) => {
   return (
-    <pre className="relative dark:bg-black/75 bg-black border text-white font-medium p-4 rounded-lg overflow-x-auto flex flex-col gap-3">
+    <pre className="relative dark:bg-black/75 bg-black border text-white font-medium p-4 rounded-lg overflow-x-auto flex flex-col gap-3 [&_*]:!text-white [&_p]:!text-white">
       {children}
       <CopyButton content={extractTextContent(children)} />
     </pre>
