@@ -3,11 +3,13 @@ import SectionProvider from "@/components/shared/provider/section-provider";
 import VideoDemo from "../../../components/shared/mdx/video-demo";
 import CodeBlock from "@/components/shared/mdx/code-block";
 import Live from "@/components/shared/live";
+import ThemeAwareImage from "@/components/shared/mdx/theme-aware-image";
 
 export const metadata = project_metadata_collection["reclara"];
 
 <SectionProvider>
 <VideoDemo href={metadata.video_demo_url} />
+
   <h1 className="text-5xl font-bold mt-8">Reclara</h1>
 
 YouTube video summarization system with automatic transcription and AI-powered summaries.
@@ -23,23 +25,34 @@ For installation and setup instructions, refer to the [README](https://github.co
 - `packages/env` - Environment configuration
 - `packages/constants` - Shared constants
 
-## Technical Architecture
+## Technical Explanation
+
+### Architecture
+
+<div className="relative w-full h-[500px] my-8 rounded-lg overflow-hidden">
+  <ThemeAwareImage 
+    lightSrc="/reclara-architectural-light.png"
+    darkSrc="/reclara-architectural-dark.png"
+    alt="Reclara Architecture Diagram"
+    containerClass="w-full h-full"
+  />
+</div>
 
 ### Database Schema
 
 The core of Reclara's functionality revolves around the Summary table:
 
-| Field | Type | Description |
-| --- | --- | --- |
-| id | UUID | Unique identifier (derived from YouTube video ID) |
-| userId | UUID | Reference to the user who created the summary |
-| transcript | text | Cleaned transcript extracted from the video |
-| summarize | text | AI-generated summary result |
-| model | enum | Type of LLM model used ("gpt-oss-120b" \| "llama-4-maverick" \| "Qwen3 Reranker 8B") |
-| state | enum | Job state tracking ("pending" \| "start_transcript" \| "success_transcript" \| "start_summarizing" \| "finished" \| "error") |
-| createdAt | timestamp | Record creation time |
-| updatedAt | timestamp | Last update time |
-| videoId | string(11) | YouTube video identifier |
+| Field      | Type       | Description                                                                                                                  |
+| ---------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| id         | UUID       | Unique identifier (derived from YouTube video ID)                                                                            |
+| userId     | UUID       | Reference to the user who created the summary                                                                                |
+| transcript | text       | Cleaned transcript extracted from the video                                                                                  |
+| summarize  | text       | AI-generated summary result                                                                                                  |
+| model      | enum       | Type of LLM model used ("gpt-oss-120b" \| "llama-4-maverick" \| "Qwen3 Reranker 8B")                                         |
+| state      | enum       | Job state tracking ("pending" \| "start_transcript" \| "success_transcript" \| "start_summarizing" \| "finished" \| "error") |
+| createdAt  | timestamp  | Record creation time                                                                                                         |
+| updatedAt  | timestamp  | Last update time                                                                                                             |
+| videoId    | string(11) | YouTube video identifier                                                                                                     |
 
 ### Workflow Overview
 
@@ -49,7 +62,7 @@ The Reclara system follows a distributed job queue architecture:
 2. **Job Creation** - Server creates a record in the database with state "pending" and sends a job to the transcript worker
 3. **Transcription** - Transcriber worker processes the video using yt-dlp to extract and clean the transcript
 4. **Summarization** - Summarizer worker generates an AI-powered summary using the cleaned transcript
-5. **Polling** - Client periodically polls the server to fetch results when state becomes "finished"
+5. **Polling** - Client periodically polls the server for results. While WebSocket or Server-Sent Events (SSE) would be more efficient for real-time updates, polling was chosen to align with Vercel's serverless architecture constraints
 
 ### Transcript Processing
 
@@ -61,19 +74,24 @@ The transcript extraction includes sophisticated fallback mechanisms:
 - **Cleaning**: Strips VTT metadata (timestamps, positioning) to extract only the text content
 
 **Example Raw VTT Format:**
-```
-WEBVTT
-Kind: captions
-Language: en
 
-00:00:14.310 --> 00:00:14.320 align:start position:0%
-Kompas tonight on Kompas TV Independant.
-```
+<CodeBlock>
+  <span>WEBVTT</span>
+  <span>Kind: captions</span>
+  <span>Language: en</span>
+  <span></span>
+  <span>00:00:14.310 --> 00:00:14.320 align:start position:0%</span>
+  <span>Kompas tonight on Kompas TV Independant.</span>
+</CodeBlock>
 
 **After Cleaning:**
-```
-Kompas tonight on Kompas TV Independant. Trustworthy, Brother. The first information...
-```
+
+<CodeBlock>
+  <span>
+    Kompas tonight on Kompas TV Independant. Trustworthy, Brother. The first
+    information...
+  </span>
+</CodeBlock>
 
 ### AI-Powered Summarization
 
@@ -85,18 +103,19 @@ The summarizer worker uses the Fireworks API with structured output:
 4. **Result Storage**: Saves the generated summary and updates the database state to "finished"
 
 **Generated Summary Structure:**
-```markdown
-# Video Summary
-[Opening paragraphs explaining main content]
 
-## Main Points
-- [Important point 1]
-- [Important point 2]
-- [Important point 3]
-
-## Conclusion
-[Closing paragraph with core message]
-```
+<CodeBlock>
+  <span># Video Summary</span>
+  <span>[Opening paragraphs explaining main content]</span>
+  <span></span>
+  <span>## Main Points</span>
+  <span>- [Important point 1]</span>
+  <span>- [Important point 2]</span>
+  <span>- [Important point 3]</span>
+  <span></span>
+  <span>## Conclusion</span>
+  <span>[Closing paragraph with core message]</span>
+</CodeBlock>
 
 ### Job Queue Architecture
 
@@ -111,11 +130,13 @@ Reclara uses a producer-consumer pattern with BullMQ and Redis:
 ### Tools & Libraries
 
 **Frontend:**
+
 - Next.js - Full-stack React framework
 - TypeScript - Static type checking
 - Better-auth - Authentication system
 
 **Backend:**
+
 - Bun - JavaScript/TypeScript runtime
 - Drizzle ORM - Type-safe database queries
 - Turso + SQLite - Edge database
@@ -125,10 +146,10 @@ Reclara uses a producer-consumer pattern with BullMQ and Redis:
 - Fireworks AI - LLM inference platform with GPT-OSS-120B, Llama 4, and Qwen3 models
 
 **Infrastructure:**
+
 - Docker & Docker Compose - Local development containerization
 - GCP Compute Engine - Backend deployment
 - Vercel - Next.js frontend hosting
 - GitHub Actions - CI/CD automation
-
 
 </SectionProvider>
