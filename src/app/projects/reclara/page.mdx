@@ -38,6 +38,16 @@ For installation and setup instructions, refer to the [README](https://github.co
   />
 </div>
 
+### Workflow Overview
+
+The Reclara system follows a distributed job queue architecture:
+
+1. **User Submission** - User sends a YouTube video URL to the server
+2. **Job Creation** - Server creates a record in the database with state "pending" and sends a job to the transcript worker
+3. **Transcription** - Transcriber worker processes the video using yt-dlp to extract and clean the transcript
+4. **Summarization** - Summarizer worker generates an AI-powered summary using the cleaned transcript
+5. **Polling** - Client periodically polls the server for results. While WebSocket or Server-Sent Events (SSE) would be more efficient for real-time updates, polling was chosen to align with Vercel's serverless architecture constraints
+
 ### Database Schema
 
 The core of Reclara's functionality revolves around the Summary table:
@@ -53,16 +63,6 @@ The core of Reclara's functionality revolves around the Summary table:
 | createdAt  | timestamp  | Record creation time                                                                                                         |
 | updatedAt  | timestamp  | Last update time                                                                                                             |
 | videoId    | string(11) | YouTube video identifier                                                                                                     |
-
-### Workflow Overview
-
-The Reclara system follows a distributed job queue architecture:
-
-1. **User Submission** - User sends a YouTube video URL to the server
-2. **Job Creation** - Server creates a record in the database with state "pending" and sends a job to the transcript worker
-3. **Transcription** - Transcriber worker processes the video using yt-dlp to extract and clean the transcript
-4. **Summarization** - Summarizer worker generates an AI-powered summary using the cleaned transcript
-5. **Polling** - Client periodically polls the server for results. While WebSocket or Server-Sent Events (SSE) would be more efficient for real-time updates, polling was chosen to align with Vercel's serverless architecture constraints
 
 ### Transcript Processing
 
