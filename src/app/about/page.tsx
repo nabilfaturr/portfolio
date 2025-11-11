@@ -26,7 +26,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
               Nabil Faturrahman
             </strong>
             . I&apos;m 21 years old and currently in my last year studying
-            Computer Science at Universitas Mikrosil in Indonesia. I have a
+            Computer Science at Universitas Mikroskil in Indonesia. I have a
             strong passion for web development and design, and I&apos;m working
             towards becoming a full-stack developer development and design.
           </span>

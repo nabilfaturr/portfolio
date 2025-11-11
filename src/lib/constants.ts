@@ -45,7 +45,7 @@ export const webStacks = {
   UI: { name: "Shadcn/UI", url: "https://ui.shadcn.com/" },
   Deployment: { name: "Vercel", url: "https://vercel.com/" },
   Blog: { name: "MDX", url: "https://mdxjs.com/" },
-  Analytics: { name: "Coming Soon!", url: "" },
+  Analytics: { name: "Vercel Analytics", url: "https://vercel.com/analytics" },
 };
 
 export const social_links = [
