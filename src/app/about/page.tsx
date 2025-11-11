@@ -25,8 +25,8 @@ const AboutPage: React.FC<AboutPageProps> = () => {
             <strong className="font-semibold text-teal-600">
               Nabil Faturrahman
             </strong>
-            . I&apos;m 20 years old and currently in my 5th semester studying
-            Computer Science at Mikroskil University in Indonesia. I have a
+            . I&apos;m 21 years old and currently in my last year studying
+            Computer Science at Universitas Mikrosil in Indonesia. I have a
             strong passion for web development and design, and I&apos;m working
             towards becoming a full-stack developer development and design.
           </span>
@@ -42,7 +42,7 @@ const AboutPage: React.FC<AboutPageProps> = () => {
             I know the journey ahead is long, and that’s the best part! There’s
             so much to learn, and I’m motivated to explore as much as I can. I
             love learning, improving, and sharing my journey, so feel free to
-            reach out—I’d be more than happy to connect.
+            reach out. I’d be more than happy to connect!
           </span>
         </p>
       </div>
